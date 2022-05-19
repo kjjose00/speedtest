@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Speed Checker App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgb(201, 41, 41);
+            box-shadow: 0 0 20px grey;
+            color: gold;
+            border: none;
+            font-size: larger;
+            font-weight: bolder;
+        
+        }
+        button:hover{
+            width: 220px;
+            height: 220px;
+            box-shadow: 0 0 30px blue;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 30px;
+        
+        }
+        h1{
+            font-size: 70px;
+            color: blue;
+        }
+       #wait{
+           font-size: 30px;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-weight: 900;
+       }
+      
+    </style>
+</head>
+<body>
+    <h1>Check Your Internet Speed At One Click</h1>
+    <a href="{% url 'results' %}"><button title="click here to start" onclick="getElementById('wait').innerHTML = 'wait, checking ...'">START</button></a>
+    <h3 id="wait"></h3>
+</body>
+</html>
